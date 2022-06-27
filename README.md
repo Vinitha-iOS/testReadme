@@ -1,27 +1,27 @@
-# iOS Application SelfPass
+# iOS Application Stageflo
 
 ![Logo](./Logo/logo.png)   
 
 ![Platform](https://img.shields.io/badge/platforms-iOS-lightgrey)
-![Xcode](https://img.shields.io/badge/Xcode-11.0%2B-yellowgreen)
+![Xcode](https://img.shields.io/badge/Xcode-13.0%2B-yellowgreen)
 ![Swift](https://img.shields.io/badge/Language-SWIFT%205-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-This directory contains the full implementation of SelfPass application for iOS platform. This app is created and layout it programmatically, and get everything done with Storyboard and XIB. Additionally, It also provides a way to cooperate with UIScrollView.
+This directory contains the full implementation of Stageflo application for iOS platform. This app is created and layout it programmatically, and get everything done with Storyboard. Additionally, It also provides a way to cooperate with UIScrollView.
 
 
 # Requirements
 
 iOS 12.4+
 
-Xcode 11.0+
+Xcode 13.0+
 
 Swift  5
 
 # Installation
 
 
-The preferred way of installing SelfPass is Clone this repository and import into the Xcode.
+The preferred way of installing stageflo is Clone this repository and import into the Xcode.
 
 1. open terminal and select the preferred Locations for the app 
 2. use the clone command below:
