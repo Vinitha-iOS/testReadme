@@ -7,8 +7,9 @@
 ![Swift](https://img.shields.io/badge/Language-SWIFT%205-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-This directory contains the full implementation of Stageflo application for iOS platform. This app is created and layout it programmatically, and get everything done with Storyboard. Additionally, It also provides a way to cooperate with UIScrollView.
+This Project is mainly used to create a band or join the band. you can search the sound engineer and request them and saved them for furture purpose.
 
+This directory contains the full implementation of Stageflo application for iOS platform. This app is created and layout it programmatically, and get everything done with Storyboard. Additionally, It also provides a way to cooperate with UIScrollView.
 
 # Requirements
 
@@ -28,7 +29,7 @@ The preferred way of installing stageflo is Clone this repository and import int
 
 ```swift
 
-git clone https://Vinitha-Skeintech@bitbucket.org/umaitero/opensource_ios_selfpass.git
+git clone https://github.com/SelfInnovations/stageflo_ios_app.git
 
 ```
 The files contained here:
@@ -39,26 +40,23 @@ You can use this as a starting point to create new apps from scratch.
 
 
 ## API Setup:
-Update ```Selfpass/Selfpass/Constants/Constants.swift``` with the following info:
+Update ```Stageflo/Stageflo/Supporting files/Constants.swift``` with the following info:
 
 ```swift
 SERVER_BASE_URL = "Contact support team to get APP-BASE-URL"
-NEWS_FEED_URL = "Contact support team to get NEWS_FEED_URL"
-APP_ID = "Contact support team to get APP_ID"
-CBU_UDID_BLUETOOTH = "Contact Support team to get CBU_UDID_BLUETOOTH"
-CONTACTUS_URL = "contact Support team to get CONTACTUS_URL"
 PRIVACY_URL = "Contact support team to get PRIVACY_URL"
-ABOUTUS_URL = "Contact support team to get ABOUTUS_URL"
+TERMS_AND_CONDITIONS_URL = "Contact support team to get ABOUTUS_URL"
+
 ```
 
 
-## Update ```SelfPass/SelfPass/GoogleService-Info.plist```
+## Update ```Stageflo/Stageflo/GoogleService-Info.plist```
 
 Generate the GoogleService-Info.plist from Firebase Console to enable O-Auth, Crashlytics, Google Sigin and Push Notifications.
 
 After Generating the GoogleService-Info.plist, Replace the GoogleService-Info.plist with new one.
 
-## Update ```SelfPass/SelfPass/info.plist``` 
+## Update ```Stageflo/Stageflo/info.plist``` 
 
 Update the URL types with the Following info:
 
@@ -68,7 +66,7 @@ URL Types - "Reverse Client Id in GoogleService-info.plist" with the  GoogleServ
 # Usage
 
 You could directly clone and open in the xcode. 
-Select the scheme as "SelfPass" and Choose the device and run on the xcode.
+Select the scheme as "Stageflo" and Choose the device and run on the xcode.
 
 
 # Generating the ipa
@@ -89,11 +87,11 @@ We tried to keep things as native as possible, so this is done mostly through na
 
 App theme - we use the Default app theme only. so you no need to import any font classes seperately.
 
-We Implemented all the Features you need through the Xibs and Storyboard.
+We Implemented all the Features you need through the Storyboard.
 
 We Split the Storyboards and done all the Viewcontrollers UI. you can search the Storyboard by using the feature name itself.
 
-Most of the Reusable Cells  are done in Xibs and some are done on Storyboard itself. 
+Most of the Reusable Cells  are done on Storyboard itself. 
 
 
 ### Naming:
@@ -102,37 +100,44 @@ We can use the naming Standards that provided by apple itself.
 
 All the Reusable Cells are ending in the Form TVC or CVC.
 
-All the ViewControllers are ending in the Form of VC. 
+All the ViewControllers are ending in the Form of ViewController. 
 
 (It is useful for you to search the files Easily.)
 
-All Models are ending in form of  Model.
+All Configurations are declared in ```Constants.Swift``` file.
+
+### Design Pattern:
+
+We use the MVVM architecture pattern in this project.
+ 
+All ViewModels are ending in form of  ViewModel.
 ```
 for example 
-LoginModel, Profile, SignupModel as AuthModel. 
+LoginViewModel, ProfileViewModel,RegisterViewModel. 
 ```
-it is mentioned as Authorization Model.
+All Model are ending in the form of Model.
 
 ```
-Environment check in as EnvironmentModel.
+for example.
+ProfileUserDataModel - for profile information of the user who logged in.
+LoginModel - for login information of the user. It can reuse for registration.
 
 ```
-All Configurations are declared in ```Constants.Swift``` file.
+Some Models are reused for various information collections. because we receive the same key for
+show the information.
 
 
 # Data collection
 
-The SelfPass collect below data. We provide this notice to help you fill out [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/).
+The Stageflo collect below data. We provide this notice to help you fill out [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/).
 
 * Name
-* DOB
+* Brief Detail information about you.
 * Email
-* Location
-* Audio 
 * Photos or Videos
 
 # Contribution
-Hey! Do you like Selfpass? Awesome! We could actually really use your help!
+Hey! Do you like Stageflo? Awesome! We could actually really use your help!
 
 Open source isn't just writing code. so feel free to contribute. How?
 
@@ -143,4 +148,4 @@ Open source isn't just writing code. so feel free to contribute. How?
 Please Read the [Contribution Guidelines](./CONTRIBUTING.md) before Contribution. We take it very seriously, and expect that you will as well.
 
 # License
-Self Pass is Released under the MIT License. See [MIT License](./License.md) for more information.
+Stageflo is Released under the MIT License. See [MIT License](./License.md) for more information.
